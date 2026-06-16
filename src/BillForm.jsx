@@ -256,7 +256,7 @@ function handleChange(e) {
 
         <label>Customer Mobile</label>
         <input
-          type="text"
+          type="number"
           name="customerMobile"
           value={formData.customerMobile}
           onChange={handleChange}
@@ -264,7 +264,7 @@ function handleChange(e) {
 
         <label>Booking ID</label>
         <input
-          type="text"
+          type="number"
           name="bookingId"
           value={formData.bookingId}
           onChange={handleChange}
