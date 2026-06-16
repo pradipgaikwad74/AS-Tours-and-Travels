@@ -333,7 +333,7 @@ function handleChange(e) {
           onChange={handleChange}
         />
 
-        <label>Extra KM Charge</label>
+        <label>Extra KM</label>
         <input
           type="number"
           name="extraKm"
@@ -341,7 +341,7 @@ function handleChange(e) {
           onChange={handleChange}
         />
 
-        <label>Extra Hours Charge</label>
+        <label>Extra Hours</label>
         <input
           type="number"
           name="extraHours"
