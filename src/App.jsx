@@ -1,7 +1,8 @@
 
 
 import './App.css'
-import BillForm from './Billform'
+import BillForm from './BillForm'
+
 
 function App() {
 
