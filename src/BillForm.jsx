@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./BillForm.css";
+import "./Billform.css";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import InvoicePreview from "./InvoicePreview";
