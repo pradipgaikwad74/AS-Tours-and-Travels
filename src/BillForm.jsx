@@ -35,11 +35,12 @@ function BillForm() {
     }
 
     const canvas = await html2canvas(invoice, {
-      scale: 4,
+      scale: 1.5,
       useCORS: true,
+      logging:false,
     });
 
-    const imgData = canvas.toDataURL("image/png");
+    const imgData = canvas.toDataURL("image/png",0.6);
 
     const pdf = new jsPDF("p", "mm", "a4");
 
@@ -50,7 +51,7 @@ function BillForm() {
 
     pdf.addImage(
       imgData,
-      "PNG",
+      "JPEG",
       0,
       0,
       pdfWidth,
@@ -168,16 +169,16 @@ function handleChange(e) {
   }
 
   // Booking ID Validation
- if (name === "bookingId") {
-  // Letters not allowed
+if (name === "bookingId") {
   if (/[A-Za-z]/.test(value)) {
     alert("Booking ID cannot contain letters");
   }
 
   setFormData({
     ...formData,
-    bookingId: value.replace(/[A-Za-z]/g, ""),
+    bookingId: value.replace(/[A-Za-z\s]/g, ""), // removes letters and spaces
   });
+
   return;
 }
 
@@ -264,7 +265,7 @@ function handleChange(e) {
 
         <label>Booking ID</label>
         <input
-          type="number"
+          type="text"
           name="bookingId"
           value={formData.bookingId}
           onChange={handleChange}
