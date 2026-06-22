@@ -35,7 +35,7 @@ function BillForm() {
     }
 
     const canvas = await html2canvas(invoice, {
-      scale: 1.1,
+      scale: 1,
       useCORS: true,
     });
 
