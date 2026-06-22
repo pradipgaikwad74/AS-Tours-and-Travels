@@ -35,12 +35,11 @@ function BillForm() {
     }
 
     const canvas = await html2canvas(invoice, {
-      scale: 1.5,
+      scale: 1.2,
       useCORS: true,
-      logging:false,
     });
 
-    const imgData = canvas.toDataURL("image/png",0.6);
+    const imgData = canvas.toDataURL("image/png",0.4);
 
     const pdf = new jsPDF("p", "mm", "a4");
 

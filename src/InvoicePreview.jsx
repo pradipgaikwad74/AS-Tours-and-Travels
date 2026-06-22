@@ -337,7 +337,7 @@ function InvoicePreview({ formData }) {
     <span>For: AS TOURS AND TRAVELS</span>
 
     <img
-      src="/src/assets/surajSign1.png"
+      src={signImage}
       alt="Signature"
       className="sign-img"
     />
